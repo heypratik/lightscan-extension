@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DocBuddy</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c996f32587.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="parent">
+
+        <div class="floating-menu" style="display: none;">
+            <ul>
+                <i class="fa fa-times float-close" aria-hidden="true"></i>
+                <div class="float-menu-items first-menu">
+                    <i class="fa fa-bookmark" style="margin-right: 10px;" aria-hidden="true"></i>
+                    <a href="bookmarks.html">
+                        <li>Bookmarks</li>
+                    </a>
+                </div>
+                <div class="float-menu-items">
+                    <i class="fa fa-cog" style="margin-right: 10px;" aria-hidden="true"></i>
+                    <a href="settings.html">
+                        <li>Settings</li>
+                    </a>
+                </div>
+            </ul>
+        </div>
+        <div class="parent-1">
+            <div class="pre-chat-parent">
+                <i class="fa fa-bars open-menu" aria-hidden="true"></i>
+                <div class="pre-chat">
+                    <img src="./Lightscan New Logo.svg" />
+                    <hr>
+                    </hr>
+                    <p style="margin-top: 10px; font-size: 20px; font-weight: bold;">Click 👇 to start</p>
+                    <button id="extract-button"> Analyze this page </button>
+                </div>
+            </div>
+            <div class="chat-enable" style="display: none;">
+                <div class="main-search">
+                    <img style="width: 40px;" src="./favicon.svg" />
+                    <input type="text" id="search-docs" placeholder="What do you want to know?">
+                    <button id="ask-ques"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+                <p style="font-size: 12px;margin-top: 3px;margin-bottom: 3px;">LightScan is <span
+                        style="color: green; font-weight: bold;">ready</span>. You can input your
+                    question into the form above.</p>
+
+                <!-- <div class="answer-card">
+                    <div style="display: flex;">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <h3 class="card-question" style="font-size: 15px; margin-left: 10px;">What is the
+                            Question?
+                        </h3>
+                    </div>
+
+                    <div style="display: flex; align-items: flex-start; margin-top: 5px;">
+                        <img style="width: 15px; margin-top: 5px;" src="./Frame 15.svg" />
+                        <p style="font-size: 14px; margin-left: 10px;" class="card-answer">This is an
+                            answers ssssss ssssss sss sssss sss sssss ssssss sssssss ss sssssss sssssss ssss sssssss
+                            ssssssssssss sss ss sssss sssssss ss
+                        </p>
+                    </div>
+
+                    <div class="card-icons"><i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                    </div>
+                </div> -->
+
+                <div class="answer-container"></div>
+
+                <div class="dot-container" style="display: none;">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="api">
+            <div class="logo-area">
+                <div class="logo-area-child">
+                    <img src="./Lightscan New Logo.svg" />
+                </div>
+            </div>
+            <hr>
+            </hr>
+            <div class="home-key">
+                <h2 class="h2">Secret key required for access.</h2>
+            </div>
+
+            <ol>
+                <li>Go to the <a style="font-weight: bold;" href="https://platform.openai.com/account/api-keys"
+                        targer="_blank">OpenAI website.</a>
+                </li>
+                <li>Log in to your account or sign up if you don't have one yet.</li>
+                <li>Click on your account name and select "API Keys" from the drop-down menu.</li>
+                <li>Create a new secret key or copy an existing one.</li>
+                <li>Paste the key in the field below.</li>
+            </ol>
+            <input type="text" id="api-key" placeholder="Secret OpenAI API Key">
+            <div class="key-area">
+                <button id="apiKey-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
